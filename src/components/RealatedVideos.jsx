@@ -11,7 +11,8 @@ export default function RealatedVideos({id}) {
     error, 
     data:videos 
   } = useQuery( ['related',id], () => youtube.relatedVideos(id),
-  {staleTime:1000*60*3}) //3분간은 캐시된 걸 씀
+  {staleTime:1000*60*10})
+
   return (
     <>
       {isLoading && <p>Loading...</p>}
