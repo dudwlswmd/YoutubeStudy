@@ -17,9 +17,4 @@ export default class YoutubeClient {
   async videos(params) {
     return this.httpClient.get("videos", params);
   }
-
-  async channels(params) {
-    return this.httpClient.get("channels", params);
-  }
-  //youtube에서 지정한 함수에서 params 가져옴
 }

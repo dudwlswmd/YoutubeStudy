@@ -1,0 +1,30 @@
+설치
+$ yarn add @tanstack/react-query
+$ yarn add axois
+
+google cloud console - https://console.cloud.google.com/ -> 프로젝트 만들기 -> API 및 서비스에서 사용자 인증 정보만들기로 key값 받아옴
+API키   AIzaSyB4HSaansATCFtxWY-ipnN81F3mhxIs2BU
+
+youtube data API 
+참조->videos->list
+[most popular video]
+https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=[YOUR_API_KEY]
+
+[search 주소 - keyword]
+https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=surfing&key=AIzaSyB4HSaansATCFtxWY-ipnN81F3mhxIs2BU
+
+[search 주소 - related]
+https://youtube.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=Ks-_Mh1QhMc&type=video&key=AIzaSyB4HSaansATCFtxWY-ipnN81F3mhxIs2BU
+
+[search 주소 - search]
+GET https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UC_x5XG1OV2P6uZZ5FSM9Ttw&key=[YOUR_API_KEY] HTTP/1.1
+
+
+key값은 .env 파일 생성해서(가장 밖에 있어야함)
+REACT_APP_YOUTUBE_API_KEY=AIzaSyB4HSaansATCFtxWY-ipnN81F3mhxIs2BU 형식으로 넣고,
+사용할땐  params: { key: process.env.REACT_APP_YOUTUBE_API_KEY }
++ gitignore에 .env 추가
+
+
+
+
