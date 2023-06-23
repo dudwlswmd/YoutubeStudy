@@ -15,15 +15,13 @@ export default class YoutubeClient {
       .get('search', params)
     }
 
-  async videos(params){
-    return this.httpClient
-      .get('videos', params)
-    }
+    async videos(params){
+      return this.httpClient
+        .get('videos', params)
+      }
+
   
-  async channels(params){
-    return this.httpClient
-      .get('channels', params)
-    } 
+
   }
 
 
